@@ -10,7 +10,7 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb+srv://harsh:harsh@harsh.fiupnla.mongodb.net/sellWool?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://harsh:harsh@<password>.fiupnla.mongodb.net/sellWool?retryWrites=true&w=majority");
 
 
 async function uploaderSeller(req,res){
