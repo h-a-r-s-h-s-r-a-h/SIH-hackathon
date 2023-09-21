@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        html {
+            background-color: #e4e9fd;
+            background-image: -webkit-linear-gradient(50deg, white 40%, #ffdbac 60%);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            max-width: 80%;
+        }
+        .container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+        .redirectbtn{
+            width: 50%;
+            height: 37px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background-color: #333;
+            transition: all ease .55s;
+        }
+        .redirectbtn:hover{
+            transform: translateY(-2.5px);
+            background-color: burlywood;
+            color: chocolate;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./images/thank.gif" alt="Thank You">
+        <h1>Thank You!</h1>
+        <p>Your Order is Sucessfully <span style="font-size: 30px; color:burlywood">Placed</span></p>
+        <P>Thanks for choosing our Services!!</P>
+        <form action="/" method="post">
+        <button class="redirectbtn">Visit Home</button>
+    </form>
+    </div>
+</body>
+</html>

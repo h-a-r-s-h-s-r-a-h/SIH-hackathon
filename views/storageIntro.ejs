@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wool Storage and WareHousing Docs</title>
+    <script
+      src="https://kit.fontawesome.com/9c45bd1b05.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+        /* own css start*/
+
+        html {
+        background-color: #e4e9fd;
+        background-image: -webkit-linear-gradient(50deg,white 40%,#ffdbac 60%);
+        min-height: 1700px;
+        }
+        .navimg {
+        height: 35px;
+        }
+        .title{
+            font-size: 35px;
+            position: absolute;
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+        /* .firstTopic{
+            position: absolute;
+            margin-top: 150px;
+            margin-left: 700px;
+        } */
+        .firstCon{
+            position: absolute;
+            margin-top: 150px;
+            margin-left: 580px;
+            margin-right: 40px;
+        }
+        .paragraph{
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 3px;
+        }
+        .btn{
+        display: inline-block;
+        padding: 15px 70px;
+        font-size: 20px;
+        font-weight: 500;
+        background: transparent;
+        border: 2px solid black;
+        color: black;
+        transition: all .55s ease;
+        }
+        .btn:hover{
+            background: white;
+            border: 2px solid white;
+            color: #000;
+        }
+        .temp{
+            position: absolute;
+            height: 400px;
+            margin-top: 180px;
+            margin-left: 30px;
+        }
+        .secondCon{
+            position: absolute;
+            margin-top: 600px;
+            margin-right: 580px;
+            margin-left: 40px;
+        }
+        .clean{
+            position: absolute;
+            height:500px;
+            margin-top: 500px;
+            margin-right: 5px;
+            margin-left: 1000px;
+        }
+        .btn2{
+            display: inline-block;
+            padding: 15px 70px;
+            font-size: 20px;
+            font-weight: 500;
+            background: transparent;
+            border: 2px solid black;
+            color: black;
+            transition: all .55s ease;
+        }
+        .btn2:hover{
+            background: #ffdbac;
+            border: 2px solid white;
+            color: #000;
+        }
+        .thirdCon{
+            position: absolute;
+            margin-top: 1050px;
+            margin-left: 580px;
+            margin-right: 40px;
+        }
+        .pest{
+            position: absolute;
+            margin-top: 1050px;
+            height: 350px;
+            margin-left: 40px;
+        }
+        .fourthCon{
+            position: absolute;
+            margin-top: 1500px;
+            margin-right: 580px;
+            margin-left: 40px;
+        }
+        .packing{
+            position: absolute;
+            height: 450px;
+            margin-top: 1400px;
+            margin-left: 950px;
+        }
+        .fifthCon{
+            position: absolute;
+            margin-top: 1900px;
+            margin-left: 580px;
+            margin-right: 40px;
+        }
+        .labelling{
+            position: absolute;
+            height: 270px;
+            margin-top: 1900px;
+            margin-left: 40px;
+            
+        }
+        .sixthCon{
+            position: absolute;
+            margin-top: 2200px;
+            margin-right: 580px;
+            margin-left: 40px;
+        }
+        .security{
+            position: absolute;
+            height: 450px;
+            margin-top: 2100px;
+            margin-left: 1000px;
+        }
+
+
+
+
+
+
+
+
+              /* own css ends */
+
+      /* nav css start */
+
+      .navbar-logo {
+        padding: 15px;
+        color: #fff;
+      }
+      .navbar-mainbg {
+        background-color: #5161ce;
+        padding: 0px;
+        height: 60px;
+      }
+      #navbarSupportedContent {
+        overflow: hidden;
+        position: relative;
+      }
+      #navbarSupportedContent ul {
+        padding: 0px;
+        margin: 0px;
+      }
+      #navbarSupportedContent ul li a i {
+        margin-right: 10px;
+      }
+      #navbarSupportedContent li {
+        list-style-type: none;
+        float: left;
+      }
+      #navbarSupportedContent ul li a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 15px;
+        display: block;
+        padding: 20px 20px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        position: relative;
+      }
+      #navbarSupportedContent > ul > li.active > a {
+        color: #5161ce;
+        background-color: transparent;
+        transition: all 0.7s;
+      }
+      #navbarSupportedContent a:not(:only-child):after {
+        content: "\f105";
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 14px;
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        font-weight: 900;
+        transition: 0.5s;
+      }
+      #navbarSupportedContent .active > a:not(:only-child):after {
+        transform: rotate(90deg);
+      }
+      .hori-selector {
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        background-color: #fff;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-top: 10px;
+      }
+      .hori-selector .right,
+      .hori-selector .left {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        bottom: 10px;
+      }
+      .hori-selector .right {
+        right: -25px;
+      }
+      .hori-selector .left {
+        left: -25px;
+      }
+      .hori-selector .right:before,
+      .hori-selector .left:before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #5161ce;
+      }
+      .hori-selector .right:before {
+        bottom: 0;
+        right: -25px;
+      }
+      .hori-selector .left:before {
+        bottom: 0;
+        left: -25px;
+      }
+
+      @media (min-width: 992px) {
+        .navbar-expand-custom {
+          -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+        }
+        .navbar-expand-custom .navbar-nav {
+          -ms-flex-direction: row;
+          flex-direction: row;
+        }
+        .navbar-expand-custom .navbar-toggler {
+          display: none;
+        }
+        .navbar-expand-custom .navbar-collapse {
+          display: -ms-flexbox !important;
+          display: flex !important;
+          -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+        }
+      }
+
+      @media (max-width: 991px) {
+        #navbarSupportedContent ul li a {
+          padding: 12px 30px;
+        }
+        .hori-selector {
+          margin-top: 0px;
+          margin-left: 10px;
+          border-radius: 0;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+        }
+        .hori-selector .left,
+        .hori-selector .right {
+          right: 10px;
+        }
+        .hori-selector .left {
+          top: -25px;
+          left: auto;
+        }
+        .hori-selector .right {
+          bottom: -25px;
+        }
+        .hori-selector .left:before {
+          left: -25px;
+          top: -25px;
+        }
+        .hori-selector .right:before {
+          bottom: -25px;
+          left: -25px;
+        }
+      }
+      /* nav css end */
+    </style>
+</head>
+<body>
+    <!-- nav start -->
+
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="/"
+          >Wool Market
+          <img
+            class="navimg"
+            src="https://media.tenor.com/jFoLqyTPFeMAAAAi/neko-cute.gif"
+        /></a>
+  
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <div class="hori-selector">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="/"
+                ><i class="fas fa-tachometer-alt"></i>Home</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:void(0);"
+                ><i class="far fa-address-book"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="seller"
+                ><i class="far fa-address-book"></i>Wool Seller</a
+              >
+            </li>
+            <!-- <li class="nav-item active">
+                          <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i></a>
+                      </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="marketplace"
+                ><i class="far fa-clone"></i>Wool MarketPlace</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newsAndTrends"
+                ><i class="far fa-calendar-alt"></i>News & Trends</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tracking"
+                ><i class="far fa-chart-bar"></i>Tracking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="processIntro"
+                ><i class="far fa-copy"></i>Education & Training</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <!-- nav end -->
+
+
+    <h3 class="title" style="color:coral;">Effective Wool Storage and Warehousing: Preserving Quality and Streamlining Inventory Management for Farmers"</h3>
+    
+    <img class="temp" src="./images/temp.png">
+    <div class="firstCon"><ul>
+        <li style="color: #1da09c;"><h3 class="firstTopic" style="color: #1da09c">Temperature and Humidity Control</h3></li>
+        <p class="paragraph">
+            Wool is sensitive to temperature and humidity fluctuations. 
+            Warehouses should be equipped with climate control systems to maintain stable conditions. 
+            Ideal storage conditions typically range from 50-65°F (10-18°C) and 45-55% relative humidity.
+            temperature and humidity control in wool storage warehouses are vital to safeguarding this valuable natural resource. 
+            By adhering to the recommended temperature and humidity ranges, farmers and warehouse operators can ensure that their wool inventory remains in optimal condition, 
+            free from damage caused by moisture, temperature fluctuations, and pests, thereby maximizing its value and utility.
+        </p>
+        <form action="/tempAndHumid" method="post">
+        <button class="btn">read me...</button>
+      </form>
+    </ul>
+    </div>
+    <div class="secondCon"><ul>
+        <li style="color: #1da09c;"><h3 class="firstTopic" style="color: #1da09c">Clean and Dry Environment</h3></li>
+        <p class="paragraph">
+            Warehouses should be clean and dry to prevent mold, mildew, and moisture-related damage. 
+            The facility should have proper drainage systems to prevent water accumulation.
+            Wool is highly susceptible to mold and mildew growth when exposed to damp and unclean environments. 
+            These fungi thrive in conditions with high moisture levels and organic matter, both of which can be found in wool. 
+            Mold and mildew not only compromise the structural integrity of wool but also produce allergens and mycotoxins that can be harmful to human health. 
+        </p>
+    </ul>
+    <form action="/cleanEnv" method="post">
+    <button class="btn2" style="margin-left: 30px;">read me...</button>
+    </form>
+    </div>
+    <img class="clean" src="./images/clean.png" alt="">
+    <img class="pest" src="./images/pest.png">
+    <div class="thirdCon"><ul>
+        <li style="color: #1da09c;"><h3 class="firstTopic" style="color: #1da09c">Pest Control</h3></li>
+        <p class="paragraph">
+            To protect wool from insects and rodents, warehouses should have adequate pest control measures in place, including traps, repellents, and routine inspections.
+            Pest control is a paramount aspect of wool storage, essential for safeguarding the integrity and value of the stored wool. 
+            Wool is a natural fiber that can be particularly attractive to insects like moths, carpet beetles, and rodents. 
+            These pests can inflict significant damage, leading to wool degradation and financial losses. 
+            Therefore, warehouses must implement comprehensive pest control measures to counter these threats.
+        </p>
+        <form action="/pestControl" method="post">
+        <button class="btn">read me...</button>
+        </form>
+    </ul>
+    </div>
+
+    <div class="fourthCon"><ul>
+        <li style="color: #1da09c;"><h3 class="firstTopic" style="color: #1da09c">Proper Packaging</h3></li>
+        <p class="paragraph">
+            Wool bales should be appropriately packaged to prevent contamination and damage during storage. 
+            This may include using plastic or woolen bale wraps to protect against dust and pests.
+            The correct packaging of wool bales is a critical element of wool storage management, as it plays a pivotal role in preserving the quality and condition of the wool throughout its time in storage. 
+            Wool, being a natural fiber, is susceptible to various environmental factors and contaminants, making appropriate packaging essential.
+        </p>
+    </ul>
+    <form action="/packing" method="post">
+    <button class="btn" style="margin-left: 30px;">read me...</button>
+    </form>
+    </div>
+    <img class="packing" src="./images/packing.png" alt="">
+
+    <img class="labelling" src="./images/labelling.png">
+    <div class="fifthCon"><ul>
+        <li style="color: #1da09c;"><h3 class="firstTopic" style="color: #1da09c">Organization and Labeling</h3></li>
+        <p class="paragraph">
+            Efficient inventory management is crucial. 
+            Each bale should be clearly labeled with information such as the wool type, grade, weight, and date of storage. 
+            A well-organized storage system helps farmers easily locate and access their wool when needed.
+        </p>
+        <form action="/organization" method="post">
+        <button class="btn">read me...</button>
+        </form>
+    </ul>
+    </div>
+
+    <div class="sixthCon"><ul>
+        <li style="color: #1da09c;"><h3 class="firstTopic" style="color: #1da09c">Security</h3></li>
+        <p class="paragraph">
+            Security is a paramount concern when it comes to safeguarding stored wool inventory against theft, 
+            unauthorized access, and potential losses. 
+            Implementing robust security measures is essential for ensuring the integrity and value of the stored wool.
+            Establishing a secure perimeter around the wool storage facility is often the first line of defense against unauthorized access and theft. 
+            Fencing, whether it's a physical barrier or an electronic fence, acts as a deterrent and prevents intruders from easily gaining access to the stored wool.
+        </p>
+    </ul>
+    <form action="/security" method="post">
+    <button class="btn" style="margin-left: 30px;">read me...</button>
+    </form>
+    </div>
+    <img class="security" src="./images/security.png" alt="">
+    
+    
+</body>
+</html>

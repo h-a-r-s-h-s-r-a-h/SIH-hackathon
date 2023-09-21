@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature & Humidity</title>
+    <script
+    src="https://kit.fontawesome.com/9c45bd1b05.js"
+    crossorigin="anonymous"
+    ></script>  
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous"
+    />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+/* own css start*/
+    html {
+        background-color: #e4e9fd;
+        background-image: -webkit-linear-gradient(50deg,white 40%,#ffdbac 60%);
+        min-height: 1700px;
+    }
+    .navimg {
+        height: 35px;
+    }
+    .heading{
+        position: absolute;
+        color: #1da09c;
+        margin-top: 30px;
+        margin-left: 400px;
+    }
+    
+    .headerimg1{
+        position: absolute;
+        margin-top: 10px;
+        height: 90px;
+        margin-left: 250px;
+    }
+    .headerimg2{
+        position: absolute;
+        height: 90px;
+        margin-left: 1100px;
+        margin-top: 10px;
+    }
+    .subtopic1{
+        position: absolute;
+        color:rgb(105, 16, 147);
+        margin-top: 130px;
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 19px;
+        font-weight: 500;
+    }
+    .subtopic2{
+        position: absolute;
+        margin-top: 250px;
+        margin-left: 200px;
+        margin-right: 200px;
+        font-size: 20px;
+    }
+    .first{
+        position: absolute;
+        margin-top: 400px;
+        margin-left: 280px;
+        margin-right: 280px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .subtopic3{
+        position: absolute;
+        margin-top: 750px;
+        margin-left: 200px;
+        margin-right: 200px;
+        font-size: 20px;
+    }
+    .second{
+        position: absolute;
+        margin-top: 850px;
+        margin-left: 280px;
+        margin-right: 280px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .conclusion{
+        position: absolute;
+        margin-top: 1340px;
+        margin-left: 130px;
+        font-size: 19px;
+        font-weight: 500;
+        margin-right: 90px;
+    }
+
+
+
+
+
+
+
+
+    /* nav css start */
+
+    .navbar-logo {
+        padding: 15px;
+        color: #fff;
+      }
+      .navbar-mainbg {
+        background-color: #5161ce;
+        padding: 0px;
+        height: 60px;
+      }
+      #navbarSupportedContent {
+        overflow: hidden;
+        position: relative;
+      }
+      #navbarSupportedContent ul {
+        padding: 0px;
+        margin: 0px;
+      }
+      #navbarSupportedContent ul li a i {
+        margin-right: 10px;
+      }
+      #navbarSupportedContent li {
+        list-style-type: none;
+        float: left;
+      }
+      #navbarSupportedContent ul li a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 15px;
+        display: block;
+        padding: 20px 20px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        position: relative;
+      }
+      #navbarSupportedContent > ul > li.active > a {
+        color: #5161ce;
+        background-color: transparent;
+        transition: all 0.7s;
+      }
+      #navbarSupportedContent a:not(:only-child):after {
+        content: "\f105";
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 14px;
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        font-weight: 900;
+        transition: 0.5s;
+      }
+      #navbarSupportedContent .active > a:not(:only-child):after {
+        transform: rotate(90deg);
+      }
+      .hori-selector {
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        background-color: #fff;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-top: 10px;
+      }
+      .hori-selector .right,
+      .hori-selector .left {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        bottom: 10px;
+      }
+      .hori-selector .right {
+        right: -25px;
+      }
+      .hori-selector .left {
+        left: -25px;
+      }
+      .hori-selector .right:before,
+      .hori-selector .left:before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #5161ce;
+      }
+      .hori-selector .right:before {
+        bottom: 0;
+        right: -25px;
+      }
+      .hori-selector .left:before {
+        bottom: 0;
+        left: -25px;
+      }
+
+      @media (min-width: 992px) {
+        .navbar-expand-custom {
+          -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+        }
+        .navbar-expand-custom .navbar-nav {
+          -ms-flex-direction: row;
+          flex-direction: row;
+        }
+        .navbar-expand-custom .navbar-toggler {
+          display: none;
+        }
+        .navbar-expand-custom .navbar-collapse {
+          display: -ms-flexbox !important;
+          display: flex !important;
+          -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+        }
+      }
+
+      @media (max-width: 991px) {
+        #navbarSupportedContent ul li a {
+          padding: 12px 30px;
+        }
+        .hori-selector {
+          margin-top: 0px;
+          margin-left: 10px;
+          border-radius: 0;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+        }
+        .hori-selector .left,
+        .hori-selector .right {
+          right: 10px;
+        }
+        .hori-selector .left {
+          top: -25px;
+          left: auto;
+        }
+        .hori-selector .right {
+          bottom: -25px;
+        }
+        .hori-selector .left:before {
+          left: -25px;
+          top: -25px;
+        }
+        .hori-selector .right:before {
+          bottom: -25px;
+          left: -25px;
+        }
+      }
+      /* nav css end */
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- nav start -->
+
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="/"
+          >Wool Market
+          <img
+            class="navimg"
+            src="https://media.tenor.com/jFoLqyTPFeMAAAAi/neko-cute.gif"
+        /></a>
+  
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <div class="hori-selector">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="/"
+                ><i class="fas fa-tachometer-alt"></i>Home</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:void(0);"
+                ><i class="far fa-address-book"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="seller"
+                ><i class="far fa-address-book"></i>Wool Seller</a
+              >
+            </li>
+            <!-- <li class="nav-item active">
+                          <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i></a>
+                      </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="marketplace"
+                ><i class="far fa-clone"></i>Wool MarketPlace</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newsAndTrends"
+                ><i class="far fa-calendar-alt"></i>News & Trends</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tracking"
+                ><i class="far fa-chart-bar"></i>Tracking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="processIntro"
+                ><i class="far fa-copy"></i>Education & Training</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <!-- nav end -->
+
+
+
+    <img src="./images/sun.png" class="headerimg1">
+    <h1 class="heading">Temperature and Humidity Control</h1> 
+    <img src="./images/sun.png" class="headerimg2">           
+
+    <p class="subtopic1">
+        Maintaining precise temperature and humidity levels is essential for preserving the quality and value of stored wool. 
+        Wool is a natural fiber known for its unique properties, including its ability to absorb and release moisture. 
+        However, this very characteristic makes wool susceptible to damage from fluctuations in temperature and humidity. 
+        Proper control of these environmental factors is crucial to ensure that stored wool remains in optimal condition.
+    </p>
+    <p class="subtopic2">
+        <strong>Temperature Control: </strong>
+        Wool storage facilities should be equipped with climate control systems that regulate temperature. 
+        The recommended temperature range for wool storage typically falls between 50-65°F (10-18°C). 
+        These temperatures are considered ideal because they minimize the risk of several issues:
+    </p>
+
+    <div class="first">
+        <ul>
+            <li>
+                <p>
+                    <strong>Preventing Fiber Deterioration:</strong> 
+                    Excessive heat can cause wool fibers to weaken and become brittle, reducing their overall quality and 
+                    durability. On the other hand, extreme cold temperatures can lead to fiber breakage. Maintaining a stable 
+                    temperature within the recommended range helps preserve the structural integrity of the wool.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Mold and Mildew Prevention: </strong>
+                    Fluctuations in temperature can create conditions conducive to mold and mildew growth, 
+                    especially if combined with high humidity. 
+                    A controlled temperature range helps inhibit the development of these harmful microorganisms, 
+                    ensuring the wool remains clean and free from contamination.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <hr width="900px" style="position: absolute; color: black; margin-left: 320px; height: 8px; margin-top: 680px; background: black;">
+
+    <p class="subtopic3">
+        <strong>Humidity Control: </strong>
+        In addition to temperature control, warehouses should manage humidity levels to safeguard stored wool. 
+        The recommended relative humidity range for wool storage is typically between 45-55%. 
+        Here's why humidity control is crucial:
+    </p>
+    <div class="second">
+        <ul>
+            <li>
+                <p>
+                    <strong>Preventing Moisture-Related Damage:</strong> 
+                    Wool readily absorbs moisture from the environment. 
+                    High humidity can lead to issues such as mold and mildew growth, fiber weakening, and an unpleasant odor. 
+                    Conversely, low humidity can cause fibers to become overly dry and brittle. 
+                    Maintaining humidity within the recommended range helps keep the wool at an optimal moisture content, 
+                    preserving its softness and strength.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Minimizing Fiber Contraction and Expansion: </strong>
+                    Wool fibers have a natural tendency to contract and expand with changes in humidity. 
+                    This behavior can lead to fiber distortion and damage over time. 
+                    By controlling humidity, warehouses ensure stable fiber dimensions, reducing the risk of deformation.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Preventing Insect Infestations: </strong>
+                    High humidity levels can attract pests like moths and carpet beetles, which can feed on wool and cause significant damage. 
+                    Controlling humidity reduces the attractiveness of the storage environment to these pests.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <h2 style="position: absolute; color: #1da09c; margin-top: 1280px; margin-left: 100px;">
+        Conclusion :-
+    </h2>
+    <div class="conclusion">
+        <p>
+            In conclusion, temperature and humidity control in wool storage facilities are paramount for maintaining the quality and value of stored wool. 
+            By adhering to the recommended temperature and humidity ranges, warehouses can ensure that the wool remains in optimal condition, 
+            free from damage caused by temperature fluctuations, moisture-related issues, and pests. 
+            This, in turn, maximizes the value and utility of the wool for various applications, including textiles, apparel, and crafting.
+        </p>
+    </div>
+
+
+
+
+
+
+
+    
+</body>
+</html>

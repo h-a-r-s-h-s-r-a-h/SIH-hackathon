@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wool processing</title>
+    <script
+    src="https://kit.fontawesome.com/9c45bd1b05.js"
+    crossorigin="anonymous"
+    ></script>  
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous"
+    />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+/* own css start*/
+    html {
+        background-color: #e4e9fd;
+        background-image: -webkit-linear-gradient(50deg,white 40%,#ffdbac 60%);
+        min-height: 1700px;
+    }
+    .navimg {
+        height: 35px;
+      }
+    .heading{
+      position: absolute;
+      margin-left: 550px;
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: 3;
+      color: #1da09c;
+      margin-top: 15px;
+    }
+    .first{
+      position: absolute;
+      margin-top: 100px;
+      margin-left: 30px;
+    }
+    .para{
+      margin-left: 60px;
+      margin-right: 700px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .wool{
+      position: absolute;
+      height: 350px;
+      margin-top: 100px;
+      margin-left: 950px;
+    }
+    .btn{
+    display: inline-block;
+    padding: 15px 70px;
+    font-size: 20px;
+    font-weight: 500;
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    transition: all .55s ease;
+    }
+    .btn:hover{
+        background: white;
+        border: 2px solid white;
+        color: #000;
+    }
+    .wool1{
+      position: absolute;
+      margin-top: 530px;
+      height: 500px;
+      margin-left: 0px;
+      width: 600px;
+    }
+    .second{
+      position: absolute;
+      margin-top: 600px;
+      margin-left: 500px;
+      margin-right: 30px;
+    }
+    .para2{
+      margin-left: 60px;
+      margin-right: 60px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .third{
+      position: absolute;
+      margin-top: 1000px;
+    }
+    .wool2{
+      position: absolute;
+      height: 550px;
+      margin-top: 920px;
+      margin-left: 850px;
+    }
+
+
+
+
+
+
+
+
+    /* nav css start */
+
+    .navbar-logo {
+        padding: 15px;
+        color: #fff;
+      }
+      .navbar-mainbg {
+        background-color: #5161ce;
+        padding: 0px;
+        height: 60px;
+      }
+      #navbarSupportedContent {
+        overflow: hidden;
+        position: relative;
+      }
+      #navbarSupportedContent ul {
+        padding: 0px;
+        margin: 0px;
+      }
+      #navbarSupportedContent ul li a i {
+        margin-right: 10px;
+      }
+      #navbarSupportedContent li {
+        list-style-type: none;
+        float: left;
+      }
+      #navbarSupportedContent ul li a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 15px;
+        display: block;
+        padding: 20px 20px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        position: relative;
+      }
+      #navbarSupportedContent > ul > li.active > a {
+        color: #5161ce;
+        background-color: transparent;
+        transition: all 0.7s;
+      }
+      #navbarSupportedContent a:not(:only-child):after {
+        content: "\f105";
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 14px;
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        font-weight: 900;
+        transition: 0.5s;
+      }
+      #navbarSupportedContent .active > a:not(:only-child):after {
+        transform: rotate(90deg);
+      }
+      .hori-selector {
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        background-color: #fff;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-top: 10px;
+      }
+      .hori-selector .right,
+      .hori-selector .left {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        bottom: 10px;
+      }
+      .hori-selector .right {
+        right: -25px;
+      }
+      .hori-selector .left {
+        left: -25px;
+      }
+      .hori-selector .right:before,
+      .hori-selector .left:before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #5161ce;
+      }
+      .hori-selector .right:before {
+        bottom: 0;
+        right: -25px;
+      }
+      .hori-selector .left:before {
+        bottom: 0;
+        left: -25px;
+      }
+
+      @media (min-width: 992px) {
+        .navbar-expand-custom {
+          -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+        }
+        .navbar-expand-custom .navbar-nav {
+          -ms-flex-direction: row;
+          flex-direction: row;
+        }
+        .navbar-expand-custom .navbar-toggler {
+          display: none;
+        }
+        .navbar-expand-custom .navbar-collapse {
+          display: -ms-flexbox !important;
+          display: flex !important;
+          -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+        }
+      }
+
+      @media (max-width: 991px) {
+        #navbarSupportedContent ul li a {
+          padding: 12px 30px;
+        }
+        .hori-selector {
+          margin-top: 0px;
+          margin-left: 10px;
+          border-radius: 0;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+        }
+        .hori-selector .left,
+        .hori-selector .right {
+          right: 10px;
+        }
+        .hori-selector .left {
+          top: -25px;
+          left: auto;
+        }
+        .hori-selector .right {
+          bottom: -25px;
+        }
+        .hori-selector .left:before {
+          left: -25px;
+          top: -25px;
+        }
+        .hori-selector .right:before {
+          bottom: -25px;
+          left: -25px;
+        }
+      }
+      /* nav css end */
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- nav start -->
+
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="/"
+          >Wool Market
+          <img
+            class="navimg"
+            src="https://media.tenor.com/jFoLqyTPFeMAAAAi/neko-cute.gif"
+        /></a>
+  
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <div class="hori-selector">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="/"
+                ><i class="fas fa-tachometer-alt"></i>Home</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:void(0);"
+                ><i class="far fa-address-book"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/seller"
+                ><i class="far fa-address-book"></i>Wool Seller</a
+              >
+            </li>
+            <!-- <li class="nav-item active">
+                          <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i></a>
+                      </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="marketplace"
+                ><i class="far fa-clone"></i>Wool MarketPlace</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newsAndTrends"
+                ><i class="far fa-calendar-alt"></i>News & Trends</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tracking"
+                ><i class="far fa-chart-bar"></i>Tracking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="processIntro"
+                ><i class="far fa-copy"></i>Education & Training</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <!-- nav end -->
+
+
+
+      <h2 class="heading">Wool processing services</h2>
+
+      <div class="first">
+        <ul>
+          <li><h3>Shearing Process</h3></li>
+        </ul>
+        <p class="para">
+          The shearing process in wool production involves the careful and skilled removal of the fleece or wool from a sheep's 
+          body. Typically conducted once a year, it is a critical step in the wool harvesting cycle. 
+          Shearing is performed by trained shearers who use specialized equipment such as electric clippers to 
+          gently and efficiently remove the fleece while ensuring the sheep's comfort and safety. 
+          Proper shearing is essential as it directly impacts the quantity and quality of wool obtained, 
+          and it also plays a role in maintaining the overall health of the sheep. After shearing, the raw 
+          fleece is collected and prepared for subsequent processing steps, including sorting and, if desired, dyeing, 
+          to transform it into market-ready wool products.
+        </p>
+        <form action="/shearing" method="post">
+        <button style="margin-left: 350px;" class="btn">Read me....</button>
+      </form>
+      </div>
+      <img src="./images/wool.png" class="wool">
+
+      <div class="second">
+        <ul>
+          <li><h3>Sorting Process</h3></li>
+        </ul>
+        <p class="para2">
+          The sorting process in wool production involves categorizing and organizing freshly sheared raw wool based on 
+          various characteristics such as fiber length, diameter, and color. This step is crucial for maximizing the value 
+          of the wool. Skilled workers carefully examine and separate the wool into different grades or lots, ensuring that 
+          fibers with similar attributes are grouped together. Sorting enhances the marketability of the wool, as it allows 
+          for the creation of higher-quality products and the fulfillment of specific customer demands. Proper sorting is an 
+          essential quality control measure that ensures the final wool products meet industry standards and expectations.
+        </p>
+        <form action="/sorting" method="post">
+        <button class="btn" style="margin-left: 230px;">Read me....</button>
+      </form>
+      </div>
+      <img src="./images/wool1.png" class="wool1">
+
+
+      <div class="third">
+        <ul>
+          <li><h3>Dyeing Process</h3></li>
+        </ul>
+        <p class="para">
+          The dyeing process in wool production is an optional step where raw wool is treated with dyes to add color. 
+          It involves immersing the wool in dye solutions to achieve desired shades and patterns. Dyeing enhances the 
+          versatility and market appeal of wool products by offering a broader range of colors and styles. This process 
+          requires attention to detail, as factors like dye selection, temperature control, and immersion time impact the 
+          final result. Dyeing can be a creative and value-adding step for wool farmers, allowing them to cater to diverse 
+          customer preferences and increase the marketability of their products.
+        </p>
+        <form action="/dyeing" method="post">
+        <button style="margin-left: 350px;" class="btn">Read me....</button>
+      </form>
+      </div>
+      <img src="./images/wool2.png" class="wool2">
+      
+
+
+
+
+
+
+
+    
+</body>
+</html>
